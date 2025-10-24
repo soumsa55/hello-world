@@ -1,3 +1,7 @@
-public static void main (String args[]){
-System.out.println("Hello, Mr.Soumya... Welcome to the world of Git,Show all that you have got");
+package com.example;
+
+public class MyApp {
+    public static void main(String[] args) {
+        System.out.println("Hello from Jenkins and Maven!");
+    }
 }
