@@ -14,6 +14,16 @@ pipeline{
       steps{
         git branch: 'master' , credentialsId: 'github' , url: 'https://github.com/soumsa55/hello-world'
       }
-    }    
+    }
+    stage ('Build Project'){
+      steps{
+        sh 'mvn -B -DskipTests clean package'
+      }
+    }
+    stage('Test') {
+        steps {
+        sh 'mvn test'
+        }
+    }
   }
 }
